@@ -22,3 +22,4 @@ class Turn {
         return this.evaluateGuess() === true ? "correct!" : "incorrect!"
     }
 }
+module.exports = Turn;
