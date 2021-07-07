@@ -20,6 +20,8 @@ class Turn {
 
     giveFeedback() {
         return this.evaluateGuess() === true ? "correct!" : "incorrect!"
+        // using ternary operator as an if statement. if evaluate guess is strictly equal to true then return correct!
+        // if not, return the second option - incorrect!
     }
 }
 module.exports = Turn;
