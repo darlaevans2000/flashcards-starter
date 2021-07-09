@@ -11,7 +11,7 @@ class Game {
     this.currentRound;
   }
 
-  start(){
+  start() {
     let cards = prototypeQuestions.map((currentCard) => {
       return new Card(currentCard.id, currentCard.question, currentCard.answers, currentCard.correctAnswer)
     });
@@ -22,12 +22,12 @@ class Game {
   }
 
   printMessage(deck) {
-      console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
+    console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`)
   }
 
   printQuestion(round) {
-      util.main(round);
+    util.main(round);
   }
 }
 
