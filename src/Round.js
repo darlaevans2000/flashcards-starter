@@ -7,6 +7,7 @@ class Round {
         this.turns = 0;
         this.correctGuesses = 0;
         this.incorrectGuesses = [];
+        this.time = Date.now();
     }
 
     returnCurrentCard() {
@@ -30,11 +31,21 @@ class Round {
         return Math.round(this.correctGuesses / this.turns * 100);
     }
 
-    endRound() {
-        const endOfGameString = `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`;
+    calculateGameTime() {
+    let milliseconds = (Date.now() - this.time);
+    let seconds = Math.round((milliseconds / 1000) % 60);
+    (seconds < 10) ? seconds = `0${seconds}` : seconds;
+    let minutes = Math.round(milliseconds / 60000);
+    let totalTime;
+    (minutes === 1) ? totalTime = `1 minute and ${seconds} seconds` : totalTime = `${minutes} minutes and ${seconds} seconds`;
+    return totalTime;
+  }
 
-        console.log(endOfGameString);
-        return endOfGameString;
+    endRound() {
+        let percent = this.calculatePercentCorrect();
+        let time = this.calculateGameTime();
+        console.log(`** Round over! ** You answered ${percent}% of the questions correctly! Round time: ${time}`);
+        return `** Round over! ** You answered ${percent}% of the questions correctly! Round time: ${time}`;
     }
 }
 
