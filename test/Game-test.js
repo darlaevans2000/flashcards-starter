@@ -10,9 +10,9 @@ const Card = require('../src/Card');
 
 describe('Game', () => {
   let game, cards, deck, round;
-  
+
   beforeEach(() => {
-      cards = prototypeQuestions.map((currentCard) => {
+    cards = prototypeQuestions.map((currentCard) => {
       let card = new Card(currentCard.id, currentCard.question, currentCard.answers, currentCard.correctAnswer);
       return card;
     })
