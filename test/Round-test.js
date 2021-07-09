@@ -91,7 +91,7 @@ describe ('Round', () => {
         round.takeTurn('watching Netflix');
         round.calculatePercentCorrect();
 
-        expect(round.endRound()).to.equal(`** Round over! ** You answered ${round.calculatePercentCorrect()}% of the questions correctly!`);
+        expect(round.endRound()).to.equal(`** Round over! ** You answered ${round.calculatePercentCorrect()}% of the questions correctly! In ${round.calculateGameTime()}`);
     })
 
 })
