@@ -85,7 +85,7 @@ describe ('Round', () => {
         expect(round.calculatePercentCorrect()).to.equal(33);
     });
 
-    it('should return a statement at the end of each round', () => {
+    it('should return a statement at the end of each round with percent correct and amount of time taken', () => {
         round.takeTurn('sea otter');
         round.takeTurn('spleen');
         round.takeTurn('watching Netflix');
