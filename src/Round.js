@@ -44,8 +44,8 @@ class Round {
     endRound() {
         let percent = this.calculatePercentCorrect();
         let time = this.calculateGameTime();
-        console.log(`** Round over! ** You answered ${percent}% of the questions correctly! Round time: ${time}`);
-        return `** Round over! ** You answered ${percent}% of the questions correctly! Round time: ${time}`;
+        console.log(`** Round over! ** You answered ${percent}% of the questions correctly! In ${time}`);
+        return `** Round over! ** You answered ${percent}% of the questions correctly! In ${time}`;
     }
 }
 
